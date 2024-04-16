@@ -92,6 +92,7 @@ public class SysBillController extends BaseController {
     @PutMapping("/sysBill/cancel")
     public ResponseResult cancel(@RequestBody SysBillVo sysBillVo) {
         // 订单取消，更新订单状态
+        System.out.println("sysBillVo:" + sysBillVo);
         int rows = sysBillService.updateBill(sysBillVo.getSysBill());
         if (rows > 0 && sysBillVo.getSysBill().getCancelState()) {
             // 订单取消座位不再占用，更新场次的座位状态

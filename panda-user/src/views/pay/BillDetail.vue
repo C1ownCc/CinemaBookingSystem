@@ -35,7 +35,7 @@
           <div class="pay-info-status finish">已完成</div>
         </div>
       </div>
-      <div class="bill-info-status invalid" v-if="cancelState === true && cancelTime !== null">
+      <div class="bill-info-status invalid" v-if="cancelState === true && payState===false">
         <div class="pay-icon">
           <img src="../../assets/bill-invalid.png">
         </div>
@@ -61,6 +61,7 @@
             <th>播放时间</th>
             <th>座位</th>
             <th>提示信息</th>
+            <!-- <th>操作</th> -->
           </tr>
           </thead>
           <tbody>
@@ -91,11 +92,14 @@
           </div>
         </div>
         <div class="submit-bill">
+          
           <div>总价：<span>{{(billInfo.sysSession.sessionPrice * billSeats.length).toFixed(1)}}</span></div>
           <div v-if="payState === false && cancelState === false && (minutes > 0 || seconds > 0)">
             <el-button @click="payForBill" type="primary" style="width: 200px; margin-top: 20px;" round>立即支付</el-button></div>
           <div v-if="payState === false && cancelState === false && (minutes > 0 || seconds > 0)">
             <el-button @click="cancelForBill" type="danger" style="width: 200px; margin-top: 20px;" round>取消订单</el-button></div>
+            <div v-if="payState === true && cancelState === false">
+            <el-button @click="cancelForBill" type="danger" style="width: 200px; margin-top: 20px;" round>退款</el-button></div>
         </div>
       </div>
     </div>
@@ -179,6 +183,7 @@ export default {
     async cancelForBill() {
       //更新订单状态
       this.billInfo.cancelState = true
+      this.billInfo.payState = false
       this.billInfo.cancelTime = moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
       // 获取场次座位信息
       const { data : curSession } = await axios.get('sysSession/find/' + this.billInfo.sessionId)
