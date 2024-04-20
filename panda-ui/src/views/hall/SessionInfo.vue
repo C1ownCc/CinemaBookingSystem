@@ -75,6 +75,11 @@
             <span>{{scope.row.seatNums - scope.row.sallNums}}</span>
           </template>
         </el-table-column>
+        <el-table-column prop="sellNums / seatNums" label="上座率">
+          <template slot-scope="scope">
+            <span>{{(scope.row.sallNums/scope.row.seatNums)*100}}%</span>
+          </template>
+        </el-table-column>
         <el-table-column prop="sessionTips" label="提示信息"></el-table-column>
 
         <el-table-column label="操作" width="180" align="center">

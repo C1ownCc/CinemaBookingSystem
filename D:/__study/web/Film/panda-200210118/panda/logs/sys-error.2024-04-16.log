@@ -1,0 +1,4 @@
+09:31:10.419 [http-nio-8181-exec-2] ERROR c.p.c.utils.JwtUtil - [verify,41] - JwtUtil登录验证失败!
+09:31:10.430 [http-nio-8181-exec-2] ERROR c.p.f.s.r.CustomerRealm - [doGetAuthenticationInfo,65] - 用户名或密码错误(token无效或者与登录者不匹配)
+09:31:10.431 [http-nio-8181-exec-2] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败
+09:35:03.386 [http-nio-8181-exec-4] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败

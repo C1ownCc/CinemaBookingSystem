@@ -19,14 +19,14 @@
         </div>
       </div>
       <!-- 未支付，超时取消，15分钟 -->
-      <div class="bill-info-status invalid" v-if="payState === false && cancelState === true && cancelTime === null && minutes <= 0 && seconds <= 0">
+      <!-- <div class="bill-info-status invalid" v-if="payState === false && cancelState === true && cancelTime === null && minutes <= 0 && seconds <= 0">
         <div class="pay-icon">
           <img src="../../assets/bill-invalid.png">
         </div>
         <div class="pay-info">
           <div class="pay-info-status invalid">由于订单超时未支付，已失效</div>
         </div>
-      </div>
+      </div> -->
       <div class="bill-info-status finish" v-if="payState === true">
         <div class="pay-icon">
           <img src="../../assets/finish.png">
@@ -40,7 +40,7 @@
           <img src="../../assets/bill-invalid.png">
         </div>
         <div class="pay-info">
-          <div class="pay-info-status invalid">订单已取消</div>
+          <div class="pay-info-status invalid">订单已超时或已手动取消</div>
         </div>
       </div>
 
@@ -95,24 +95,62 @@
           
           <div>总价：<span>{{(billInfo.sysSession.sessionPrice * billSeats.length).toFixed(1)}}</span></div>
           <div v-if="payState === false && cancelState === false && (minutes > 0 || seconds > 0)">
-            <el-button @click="payForBill" type="primary" style="width: 200px; margin-top: 20px;" round>立即支付</el-button></div>
+            <!-- <el-button @click="payForBill" type="primary" style="width: 200px; margin-top: 20px;" round>立即支付</el-button> -->
+            <el-button @click="payVisible = true" type="primary" style="width: 200px; margin-top: 20px;" round>立即支付</el-button>
+          </div>
           <div v-if="payState === false && cancelState === false && (minutes > 0 || seconds > 0)">
             <el-button @click="cancelForBill" type="danger" style="width: 200px; margin-top: 20px;" round>取消订单</el-button></div>
             <div v-if="payState === true && cancelState === false">
             <el-button @click="cancelForBill" type="danger" style="width: 200px; margin-top: 20px;" round>退款</el-button></div>
+            <template>
+              <div v-if="payState === true && cancelState === false">
+                <vue-barcode value="billID" text="请扫码入场" :width="1.5" :height="50">
+                </vue-barcode>
+              </div>
+            </template>
         </div>
       </div>
+      <el-dialog
+        title="付款码"
+        :visible.sync="payVisible"
+        width="30%">
+        <span style="display: block; text-align: center;">请扫描以下二维码付款！</span>
+        <span style="display: flex; justify-content: center;">
+          <vue-qr 
+            :text="qrUrl"
+            :callback="qrCallBack" 
+            :size="200"
+            :margin="10"
+            colorDark="green" 
+            colorLight="white" 
+            logoSrc="/favicon.ico"
+            :logoScale="0.2"
+            :dotScale="0.7">
+          </vue-qr>
+        </span>
+        
+
+        <span slot="footer" class="dialog-footer">
+          <el-button @click="payVisible = false">取 消</el-button>
+          <el-button type="primary" @click="payForBill">确 定</el-button>
+        </span>
+      </el-dialog>
     </div>
   </div>
 </template>
 
 <script>
 import moment from 'moment'
+import VueBarcode from 'vue-barcode';
+import VueQr from 'vue-qr'
 export default {
-  name: "BillDetail",
+  components: {
+    VueBarcode,VueQr
+  },
   data() {
     return {
       billId: this.$route.params.billId,
+      payVisible: false,
       billInfo: {
         sysSession: {
           sysMovie: {},
@@ -130,6 +168,8 @@ export default {
       //计时
       minutes: 1,
       seconds: 0,
+      barcodeUrl: '',
+      qrUrl: 'https://www.npmjs.com/package/vue-qr',
     }
   },
   created() {
@@ -137,8 +177,25 @@ export default {
   },
   mounted() {
     this.add()
+    this.getBarcode();
+    this.generateQRCode();
   },
   methods: {
+    getBarcode () {
+      let options = {
+        text: "编码内容",//等同于JsBarcode第二个参数 
+        fontSize: 10,//条形码下方文字的大小
+        height: 60,//条形码的高度
+        width: 2.5,//条形码 条的宽度不是总体的宽度 (宽度过小 扫描枪会扫描不出来 天坑我踩过)
+        displayValue: false,//隐藏条形码下方文本
+      };
+      // JsBarcode第一个参数是容器ID名 第二个参数是条形码扫描后的内容(默认条形码的内容会在条形码下方展示) 第三个参数是方法的配置项(具体配置查看官网)
+      JsBarcode("#barcode", '5', options);
+    },
+    qrCallBack(qrUrl) {
+      console.log("二维码生成");
+    },
+
     async getBillInfo() {
       const { data : res } = await axios.get('sysBill/' + this.billId)
       if(res.code !== 200) return this.$message.error('获取信息失败')

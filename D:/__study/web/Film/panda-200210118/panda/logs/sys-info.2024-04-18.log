@@ -1,0 +1,140 @@
+14:24:51.441 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+14:24:51.449 [restartedMain] INFO  c.p.PandaAdminApplication - [logStarting,55] - Starting PandaAdminApplication using Java 17.0.10 on bogon with PID 61198 (/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-admin/target/classes started by charlotte in /Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem)
+14:24:51.449 [restartedMain] INFO  c.p.PandaAdminApplication - [logStartupProfileInfo,641] - The following profiles are active: druid
+14:24:51.942 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+14:24:52.258 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+14:24:52.521 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8181"]
+14:24:52.521 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+14:24:52.521 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+14:24:52.551 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+14:24:53.005 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+14:24:53.009 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+14:24:53.009 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+14:24:53.010 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+14:24:53.010 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+14:24:53.010 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+14:24:53.010 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+14:24:53.010 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@35cc55c7
+14:24:53.063 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8181"]
+14:24:53.072 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+14:24:53.077 [restartedMain] INFO  c.p.PandaAdminApplication - [logStarted,61] - Started PandaAdminApplication in 1.845 seconds (JVM running for 2.228)
+14:26:49.380 [http-nio-8181-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:27:01.968 [http-nio-8181-exec-10] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:27:08.907 [http-nio-8181-exec-8] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:27:09.021 [http-nio-8181-exec-7] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:27:17.336 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:27:17.377 [http-nio-8181-exec-3] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:30:28.320 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:31:21.351 [http-nio-8181-exec-8] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:33:18.542 [http-nio-8181-exec-3] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:33:18.608 [http-nio-8181-exec-4] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:33:24.336 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:34:52.560 [http-nio-8181-exec-6] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:35:26.937 [http-nio-8181-exec-3] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:35:37.697 [http-nio-8181-exec-9] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:35:40.135 [http-nio-8181-exec-1] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:36:19.369 [http-nio-8181-exec-9] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:36:23.480 [http-nio-8181-exec-3] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:36:24.768 [http-nio-8181-exec-8] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:36:33.329 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:37:37.383 [http-nio-8181-exec-11] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:37:52.366 [http-nio-8181-exec-6] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:37:52.366 [http-nio-8181-exec-8] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:37:57.457 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:37:58.714 [http-nio-8181-exec-1] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:37:59.794 [http-nio-8181-exec-6] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:38:01.905 [http-nio-8181-exec-9] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:38:11.746 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:38:18.404 [http-nio-8181-exec-6] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:38:18.478 [http-nio-8181-exec-9] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:38:58.972 [http-nio-8181-exec-11] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:38:58.973 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:39:08.022 [http-nio-8181-exec-10] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:39:09.023 [http-nio-8181-exec-4] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:39:27.125 [http-nio-8181-exec-4] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:39:27.125 [http-nio-8181-exec-9] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:39:34.910 [http-nio-8181-exec-3] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:39:35.966 [http-nio-8181-exec-6] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:39:37.517 [http-nio-8181-exec-8] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:39:39.030 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:39:43.326 [http-nio-8181-exec-11] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:39:58.156 [http-nio-8181-exec-3] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:39:58.881 [http-nio-8181-exec-10] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:39:58.881 [http-nio-8181-exec-8] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:39:59.812 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:40:10.727 [http-nio-8181-exec-6] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:40:10.727 [http-nio-8181-exec-1] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:40:11.366 [http-nio-8181-exec-10] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:40:12.694 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:40:12.694 [http-nio-8181-exec-2] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:40:14.531 [http-nio-8181-exec-1] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:40:20.699 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:40:20.745 [http-nio-8181-exec-11] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:43:49.432 [http-nio-8181-exec-8] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:43:51.459 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:43:51.461 [http-nio-8181-exec-9] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:43:52.908 [http-nio-8181-exec-2] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:44:00.708 [http-nio-8181-exec-10] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:44:00.707 [http-nio-8181-exec-8] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:44:09.120 [http-nio-8181-exec-2] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:44:13.355 [http-nio-8181-exec-11] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:44:18.297 [http-nio-8181-exec-8] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:44:18.889 [http-nio-8181-exec-4] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:44:21.324 [http-nio-8181-exec-2] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:44:30.441 [http-nio-8181-exec-6] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:44:36.672 [http-nio-8181-exec-10] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:44:39.111 [http-nio-8181-exec-3] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:44:39.111 [http-nio-8181-exec-2] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:44:40.446 [http-nio-8181-exec-6] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:44:53.627 [http-nio-8181-exec-9] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:45:02.547 [http-nio-8181-exec-11] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:45:06.609 [http-nio-8181-exec-1] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:45:18.682 [http-nio-8181-exec-10] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:45:40.364 [http-nio-8181-exec-3] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:45:40.430 [http-nio-8181-exec-11] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:45:41.879 [http-nio-8181-exec-1] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:45:45.181 [http-nio-8181-exec-10] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:45:46.064 [http-nio-8181-exec-9] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:45:46.079 [http-nio-8181-exec-2] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:45:55.770 [http-nio-8181-exec-4] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:45:55.774 [http-nio-8181-exec-8] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:46:04.637 [http-nio-8181-exec-3] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:46:10.147 [http-nio-8181-exec-10] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:46:10.147 [http-nio-8181-exec-9] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:46:12.062 [http-nio-8181-exec-2] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:46:15.921 [http-nio-8181-exec-8] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:46:15.981 [http-nio-8181-exec-10] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:55:02.392 [http-nio-8181-exec-3] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:55:03.053 [http-nio-8181-exec-2] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:55:03.054 [http-nio-8181-exec-11] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:55:17.658 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:55:20.769 [http-nio-8181-exec-2] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:57:48.880 [http-nio-8181-exec-3] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:57:48.882 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:58:22.918 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:58:22.918 [http-nio-8181-exec-6] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:59:02.807 [http-nio-8181-exec-9] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:59:02.807 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:59:30.640 [http-nio-8181-exec-1] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:59:30.640 [http-nio-8181-exec-8] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:59:33.520 [http-nio-8181-exec-3] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:59:40.609 [http-nio-8181-exec-9] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:59:40.665 [http-nio-8181-exec-1] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:59:42.834 [http-nio-8181-exec-2] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:59:44.482 [http-nio-8181-exec-4] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:59:45.697 [http-nio-8181-exec-11] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:59:47.871 [http-nio-8181-exec-8] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:59:53.325 [http-nio-8181-exec-2] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:59:53.341 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+14:59:59.068 [http-nio-8181-exec-11] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+15:00:02.984 [http-nio-8181-exec-1] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+15:00:30.758 [http-nio-8181-exec-3] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+15:00:33.277 [http-nio-8181-exec-11] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+15:00:36.096 [http-nio-8181-exec-1] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!

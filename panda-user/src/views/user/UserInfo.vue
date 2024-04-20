@@ -27,7 +27,7 @@
   <div style="width: 70%">
     <el-form :model="loginUser"  :rules="loginUserRules" ref="editFormRef" label-width="80px">
       <el-form-item label="用户名" prop="userName">
-        <el-input v-model="loginUser.userName"></el-input>
+        <el-input v-model="loginUser.userName" disabled></el-input>
       </el-form-item>
       <el-form-item label="电子邮箱" prop="email">
         <el-input v-model="loginUser.email"></el-input>
