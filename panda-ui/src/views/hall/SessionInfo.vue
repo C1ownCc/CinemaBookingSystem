@@ -229,7 +229,7 @@
         <span style="margin: 0 10px">禁用</span>
         <span class="seat" :class="isSelected[1]"></span>
         <span style="margin: 0 10px">售出</span>
-        <span class="seat" :class="isSelected[2]"></span>
+        <span class="seat" :class="isSelected[3]"></span>
       </div>
       <br/>
       <div class="row" v-for="(value, key) in seats">

@@ -59,7 +59,7 @@
             <span v-if="scope.row.cancelState === true && scope.row.cancelTime !==null" style="color: crimson">用户取消</span>
           </template>
         </el-table-column>
-        <el-table-column label="操作" width="120">
+        <!-- <el-table-column label="操作" width="120">
           <template slot-scope="scope">
             <el-tooltip effect="dark" content="修改订单信息" placement="top" :enterable="false" :open-delay="500">
               <el-button type="primary" icon="el-icon-edit" size="mini"
@@ -69,7 +69,7 @@
               <el-button type="danger" icon="el-icon-delete" size="mini" @click="deleteBillById(scope.row.billId)"></el-button>
             </el-tooltip>
           </template>
-        </el-table-column>
+        </el-table-column> -->
       </el-table>
 
       <!--分页区域-->
