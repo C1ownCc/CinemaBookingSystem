@@ -118,7 +118,7 @@
           </el-date-picker>
         </el-form-item>
         <el-form-item label="电影简介" prop="movieIntroduction">
-          <el-input v-model="addForm.movieIntroduction"></el-input>
+          <el-input v-model="addForm.movieIntroduction" type="textarea" autosize></el-input>
         </el-form-item>
         <el-form-item label="电影封面">
           <el-upload action="" list-type="picture-card"
@@ -208,7 +208,7 @@
           </el-date-picker>
         </el-form-item>
         <el-form-item label="电影简介" prop="movieIntroduction">
-          <el-input v-model="editForm.movieIntroduction"></el-input>
+          <el-input v-model="editForm.movieIntroduction" type="textarea" autosize></el-input>
         </el-form-item>
 <!--        修改封面-->
         <el-form-item label="电影封面">

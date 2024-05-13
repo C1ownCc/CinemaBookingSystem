@@ -12,16 +12,22 @@
     <!--卡片视图-->
     <el-card class="box-card">
       <el-row :gutter="20">
-        <el-col :span="5">
+        <el-col :span="4">
           <el-input v-model="inputUserName" placeholder="请输入用户名" clearable></el-input>
         </el-col>
         <el-col :span="4">
+          <el-input v-model="inputMovieName" placeholder="请输入电影名" clearable></el-input>
+        </el-col>
+        <el-col :span="4">
+          <el-input v-model="inputHallName" placeholder="请输入影厅名" clearable></el-input>
+        </el-col>
+        <el-col :span="3">
           <el-select v-model="selectedState" placeholder="请选择订单状态" clearable>
             <el-option v-for="item in payStates" :key="item.id" :label="item.name" :value="item.id"></el-option>
           </el-select>
         </el-col>
 
-        <el-col :span="5">
+        <el-col :span="4">
           <el-date-picker
               v-model="selectedDate"
               type="date"
@@ -33,9 +39,9 @@
         <el-col :span="2">
           <el-button icon="el-icon-search" @click="getBillList">搜索</el-button>
         </el-col>
-        <el-col :span="2">
+        <!-- <el-col :span="2">
           <el-button type="danger" @click="multipleDelete">批量删除</el-button>
-        </el-col>
+        </el-col> -->
       </el-row>
 
       <!--订单列表-->
@@ -165,6 +171,8 @@ export default {
       total: 0,
       multipleSelection: [],
       inputUserName: '',
+      inputMovieName: '',
+      inputHallName: '',
       selectedState: '',
       selectedDate: '',
       editDialogVisible: false,
@@ -207,6 +215,8 @@ export default {
       // this.userName = this.inputUserName
       this.queryInfo.payState = this.selectedState
       this.queryInfo.createTime = this.selectedDate
+      this.queryInfo.movieName = this.inputMovieName
+      this.queryInfo.hallName = this.inputHallName
       console.log('quaryInfo'+this.inputUserName)
       this.queryInfo.queryByUserName = this.inputUserName
       console.log('sysUser.userName')
@@ -215,6 +225,7 @@ export default {
       await axios.get('sysBill', {params: _this.queryInfo}).then(resp => {
         console.log(resp)
         _this.billList = resp.data.data;
+        // console.log("0000000000000000000000000:",_this.billList);
         _this.total = resp.data.total;
         _this.queryInfo.pageSize = resp.data.pageSize;
         _this.queryInfo.pageNum = resp.data.pageNum;

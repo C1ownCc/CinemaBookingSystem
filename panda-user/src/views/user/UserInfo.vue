@@ -84,7 +84,7 @@ export default {
       //验证表单规则对象
       loginUserRules: {
         userName: [
-          { required: true, message: '请输入用户名', trigger: 'blur' }
+          { required: false, message: '请输入用户名', trigger: 'blur' }
         ],
         email: [
           { required: true, message: '请输入电子邮箱', trigger: 'blur' },

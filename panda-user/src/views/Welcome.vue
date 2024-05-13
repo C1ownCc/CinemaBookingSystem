@@ -22,7 +22,15 @@
         </div>
         <el-dropdown @command="handleCommand">
           <span class="el-dropdown-link">
-            <el-avatar :src="url" :size="50">{{url === '' || url === null ? 'user': ''}}</el-avatar>
+            <!-- <el-avatar :src="url" :size="50">{{url === '' || url === null ? '游客': ''}}</el-avatar> -->
+            <el-avatar :src="url" :size="50">
+              {{
+                !isToken ? '游客' : 
+                  (url === '' || url === null ? 'User' : '')
+              }}
+            </el-avatar>
+
+
             <i class="el-icon-arrow-down el-icon--right icon-arrow"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
@@ -88,7 +96,12 @@ export default {
     this.isToken = window.sessionStorage.getItem("token")
     const userPicture = JSON.parse(window.sessionStorage.getItem('loginUser')).userPicture
     const picture = JSON.parse(userPicture)
-    if(picture === null || picture.length === 0) return;
+    console.log('urlurlurlurl1:',picture);
+    if(picture === null || picture.length === 0){
+      this.url = this.global.base + '/images/user/default.png'
+      console.log('urlurlurlurl2:',this.url);
+      return;
+    }
     this.url = this.global.base + picture[0]
   },
   watch: {

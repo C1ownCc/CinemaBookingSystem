@@ -91,23 +91,25 @@
             <span>电话: {{billInfo.sysSession.sysHall.sysCinema.cinemaPhone}} </span>
           </div>
         </div>
+        <template>
+          <div v-if="payState === true && cancelState === false">
+            <el-button @click="saveBarcode" type="primary" style="width: 200px; margin-top: 20px;" round>下载条形码</el-button>
+            <vue-barcode value="billID" text="请保存此条形码，扫码入场" ref="barcode" :width="1.5" :height="50">
+            </vue-barcode>
+          </div>
+        </template>
+
         <div class="submit-bill">
           
           <div>总价：<span>{{(billInfo.sysSession.sessionPrice * billSeats.length).toFixed(1)}}</span></div>
           <div v-if="payState === false && cancelState === false && (minutes > 0 || seconds > 0)">
             <!-- <el-button @click="payForBill" type="primary" style="width: 200px; margin-top: 20px;" round>立即支付</el-button> -->
             <el-button @click="payVisible = true" type="primary" style="width: 200px; margin-top: 20px;" round>立即支付</el-button>
-          </div>
+          </div>  
           <div v-if="payState === false && cancelState === false && (minutes > 0 || seconds > 0)">
             <el-button @click="cancelForBill" type="danger" style="width: 200px; margin-top: 20px;" round>取消订单</el-button></div>
             <div v-if="payState === true && cancelState === false">
             <el-button @click="cancelForBill" type="danger" style="width: 200px; margin-top: 20px;" round>退款</el-button></div>
-            <template>
-              <div v-if="payState === true && cancelState === false">
-                <vue-barcode value="billID" text="请扫码入场" :width="1.5" :height="50">
-                </vue-barcode>
-              </div>
-            </template>
         </div>
       </div>
       <el-dialog
@@ -169,7 +171,7 @@ export default {
       minutes: 1,
       seconds: 0,
       barcodeUrl: '',
-      qrUrl: 'https://www.npmjs.com/package/vue-qr',
+      qrUrl: 'https://www.npmjs.com/package/vue-qr',//这里实际应该跳转至支付链接
     }
   },
   created() {
@@ -194,6 +196,40 @@ export default {
     },
     qrCallBack(qrUrl) {
       console.log("二维码生成");
+    },
+
+    saveBarcode() {
+      let svgElement = this.$refs.barcode.$el.querySelector('svg');
+      if (!svgElement) {
+        console.error('Barcode SVG element not found');
+        return;
+      }
+
+      // 将SVG转换为DataURL
+      let xml = new XMLSerializer().serializeToString(svgElement);
+      let svg64 = btoa(unescape(encodeURIComponent(xml)));
+      let b64Start = 'data:image/svg+xml;base64,';
+      let image64 = b64Start + svg64;
+
+      // 创建Image对象，用于渲染Canvas
+      let img = new Image();
+      img.onload = () => {
+        let canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        let ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+        let canvasData = canvas.toDataURL('image/png');
+
+        // 触发下载
+        let downloadLink = document.createElement('a');
+        downloadLink.href = canvasData;
+        downloadLink.download = 'barcode.png';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      };
+      img.src = image64;
     },
 
     async getBillInfo() {

@@ -61,4 +61,8 @@ public class SysBill implements Serializable {
 
     private SysUser sysUser;
 
+    // 新增字段
+    private String movieName;
+    private String hallName;
+
 }

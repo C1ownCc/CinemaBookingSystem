@@ -151,20 +151,20 @@
     <!--修改用户对话框-->
     <el-dialog title="修改用户信息" :visible.sync="editDialogVisible" width="60%" @close="editDialogClosed">
       <el-form :model="editForm" :rules="editFormRules" ref="editFormRef" label-width="150px">
-        <el-form-item label="用户名" prop="userName">
-          <el-input v-model="editForm.userName"></el-input>
+        <el-form-item label="用户名" prop="userName" >
+          <el-input v-model="editForm.userName" disabled></el-input>
         </el-form-item>
         <el-form-item label="密码" prop="password">
           <el-input v-model="editForm.password" type="password" show-password></el-input>
         </el-form-item>
         <el-form-item label="电子邮箱" prop="email">
-          <el-input v-model="editForm.email"></el-input>
+          <el-input v-model="editForm.email" disabled></el-input>
         </el-form-item>
         <el-form-item label="手机号码" prop="phoneNumber">
-          <el-input v-model="editForm.phoneNumber"></el-input>
+          <el-input v-model="editForm.phoneNumber" disabled></el-input>
         </el-form-item>
-        <el-form-item label="性别" prop="sex">
-          <el-select v-model="editForm.sex" placeholder="请选择性别" clearable >
+        <el-form-item label="性别" prop="sex" >
+          <el-select v-model="editForm.sex" placeholder="请选择性别" clearable disabled>
             <el-option
                 v-for="item in gender"
                 :key="item.id"
@@ -217,6 +217,7 @@
       <span slot="footer" class="dialog-footer">
         <el-button @click="cancelEdit">取 消</el-button>
         <el-button type="primary" @click="editUserInfo">确 定</el-button>
+        <el-button type="primary" @click="editUserInfo">一键重置密码</el-button>
       </span>
     </el-dialog>
   </div>
@@ -286,21 +287,21 @@ export default {
       editForm: {},
       editFormRules: {
         userName: [
-          { required: true, message: '请输入用户名', trigger: 'blur' }
+          { required: false, message: '请输入用户名', trigger: 'blur' }
         ],
         password: [
           { required: true, message: '请输入密码', trigger: 'blur' }
         ],
         email: [
-          { required: true, message: '请输入电子邮箱', trigger: 'blur' },
+          { required: false, message: '请输入电子邮箱', trigger: 'blur' },
           { validator: checkEmail, trigger: 'blur'}
         ],
         phoneNumber: [
-          { required: true, message: '请输入手机号码', trigger: 'blur' },
+          { required: false, message: '请输入手机号码', trigger: 'blur' },
           { validator: checkMobile, trigger: 'blur'}
         ],
         sex: [
-          { required: true, message: '请选择性别', trigger: 'change' }
+          { required: false, message: '请选择性别', trigger: 'change' }
         ]
       },
       inputUserName: '',
@@ -429,6 +430,31 @@ export default {
     },
     async editUserInfo(){
       await this.submitFile()
+      this.editForm.userPicture = JSON.stringify(this.pictureList)
+      this.$refs.editFormRef.validate(async valid => {
+        const _this = this
+        if (!valid) return
+        let success = true
+        axios.defaults.headers.put['Content-Type'] = 'application/json'
+        await axios.put('sysUser', JSON.stringify(_this.editForm)).then(resp => {
+          if (resp.data.code !== 200){
+            this.$message.error('修改用户信息失败！')
+            success = false
+          }
+        })
+        if (!success) return
+        this.editDialogVisible = false
+        this.getUserList()
+        this.$message.success('修改用户信息成功！')
+        for(let s of this.deletePicList){
+          await axios.get('/upload/delete?filePath=' + s.substring(s.indexOf('/images')))
+        }
+      })
+    },
+
+    async editUserInfo2(){
+      await this.submitFile()
+      this.editForm.password = '123456';
       this.editForm.userPicture = JSON.stringify(this.pictureList)
       this.$refs.editFormRef.validate(async valid => {
         const _this = this

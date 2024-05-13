@@ -1,2 +1,13 @@
-11:19:48.966 [http-nio-8181-exec-2] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败
-11:22:59.200 [http-nio-8181-exec-9] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败
+08:35:36.338 [http-nio-8181-exec-2] ERROR c.p.c.utils.JwtUtil - [verify,41] - JwtUtil登录验证失败!
+08:35:36.340 [http-nio-8181-exec-2] ERROR c.p.f.s.r.CustomerRealm - [doGetAuthenticationInfo,65] - 用户名或密码错误(token无效或者与登录者不匹配)
+08:35:36.341 [http-nio-8181-exec-2] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败
+09:24:27.774 [http-nio-8181-exec-3] ERROR c.p.c.utils.JwtUtil - [verify,41] - JwtUtil登录验证失败!
+09:24:27.776 [http-nio-8181-exec-3] ERROR c.p.f.s.r.CustomerRealm - [doGetAuthenticationInfo,65] - 用户名或密码错误(token无效或者与登录者不匹配)
+09:24:27.777 [http-nio-8181-exec-3] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败
+10:32:09.695 [http-nio-8181-exec-1] ERROR c.p.c.utils.JwtUtil - [verify,41] - JwtUtil登录验证失败!
+10:32:09.697 [http-nio-8181-exec-1] ERROR c.p.f.s.r.CustomerRealm - [doGetAuthenticationInfo,65] - 用户名或密码错误(token无效或者与登录者不匹配)
+10:32:09.697 [http-nio-8181-exec-1] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败
+10:36:18.974 [http-nio-8181-exec-6] ERROR c.p.c.utils.JwtUtil - [verify,41] - JwtUtil登录验证失败!
+10:36:18.978 [http-nio-8181-exec-6] ERROR c.p.f.s.r.CustomerRealm - [doGetAuthenticationInfo,65] - 用户名或密码错误(token无效或者与登录者不匹配)
+10:36:18.978 [http-nio-8181-exec-6] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败
+10:36:42.201 [http-nio-8181-exec-5] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败
