@@ -65,4 +65,8 @@ public class SysBill implements Serializable {
     private String movieName;
     private String hallName;
 
+    //使用状态，0表示未使用，1表示已使用
+    private Boolean useState;
+    private String viewingCode;
+
 }

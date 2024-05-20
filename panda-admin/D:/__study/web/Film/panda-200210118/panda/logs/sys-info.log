@@ -1,13 +1,13 @@
-08:34:22.615 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
-08:34:22.616 [main] INFO  c.p.PandaAdminApplicationTests - [logStarting,55] - Starting PandaAdminApplicationTests using Java 17.0.10 on bogon with PID 26160 (started by charlotte in /Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-admin)
-08:34:22.616 [main] INFO  c.p.PandaAdminApplicationTests - [logStartupProfileInfo,641] - The following profiles are active: druid
-08:34:23.149 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
-08:34:23.559 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
-08:34:24.302 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
-08:34:24.307 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-08:34:24.308 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
-08:34:24.308 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
-08:34:24.308 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+09:37:11.236 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+09:37:11.236 [main] INFO  c.p.PandaAdminApplicationTests - [logStarting,55] - Starting PandaAdminApplicationTests using Java 17.0.10 on bogon with PID 72770 (started by charlotte in /Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-admin)
+09:37:11.238 [main] INFO  c.p.PandaAdminApplicationTests - [logStartupProfileInfo,641] - The following profiles are active: druid
+09:37:11.796 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+09:37:12.211 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+09:37:13.106 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+09:37:13.111 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+09:37:13.111 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+09:37:13.112 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+09:37:13.112 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -15,14 +15,42 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-08:34:24.308 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-08:34:24.308 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
-08:34:24.309 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@67e4928c
-08:34:24.344 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-08:34:24.352 [main] INFO  c.p.PandaAdminApplicationTests - [logStarted,61] - Started PandaAdminApplicationTests in 1.96 seconds (JVM running for 2.411)
-08:34:24.558 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-08:34:24.558 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-08:34:24.558 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-08:34:24.558 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-08:34:24.561 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
-08:34:24.565 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+09:37:13.112 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+09:37:13.113 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+09:37:13.113 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2dde0a34
+09:37:13.162 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+09:37:13.168 [main] INFO  c.p.PandaAdminApplicationTests - [logStarted,61] - Started PandaAdminApplicationTests in 2.173 seconds (JVM running for 2.607)
+09:37:13.371 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+09:37:13.371 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+09:37:13.371 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+09:37:13.371 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+09:37:13.373 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+09:37:13.377 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:17:34.777 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+11:17:34.780 [main] INFO  c.p.PandaAdminApplicationTests - [logStarting,55] - Starting PandaAdminApplicationTests using Java 17.0.10 on bogon with PID 2482 (started by charlotte in /Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-admin)
+11:17:34.781 [main] INFO  c.p.PandaAdminApplicationTests - [logStartupProfileInfo,641] - The following profiles are active: druid
+11:17:35.406 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:17:35.818 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:17:36.577 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+11:17:36.584 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+11:17:36.584 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+11:17:36.584 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+11:17:36.585 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+11:17:36.585 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+11:17:36.585 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+11:17:36.585 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@45b27ad3
+11:17:36.628 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+11:17:36.634 [main] INFO  c.p.PandaAdminApplicationTests - [logStarted,61] - Started PandaAdminApplicationTests in 2.172 seconds (JVM running for 2.618)
+11:17:36.835 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+11:17:36.836 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+11:17:36.836 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+11:17:36.836 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+11:17:36.838 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:17:36.843 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed

@@ -26,6 +26,11 @@ public class SysBillServiceImpl implements SysBillService {
     }
 
     @Override
+    public SysBill findBillByCode(String code) {
+        return sysBillMapper.findBillByCode(code);
+    }
+
+    @Override
     public Object addBill(SysBill sysBill) {
         int rows = sysBillMapper.addBill(sysBill);
         return rows > 0 ? sysBill : rows;

@@ -65,6 +65,13 @@
             <span v-if="scope.row.cancelState === true && scope.row.cancelTime !==null" style="color: crimson">用户取消</span>
           </template>
         </el-table-column>
+        <el-table-column prop="useState" label="检票状态" width="80">
+          <template slot-scope="scope">
+            <span v-if="scope.row.useState === true" style="color: #13ce66">已检票</span>
+            <span v-if="scope.row.useState === false " style="color: crimson">未检票</span>
+          </template>
+        </el-table-column>
+        <el-table-column prop="viewingCode" label="观影码" width="80"></el-table-column>
         <!-- <el-table-column label="操作" width="120">
           <template slot-scope="scope">
             <el-tooltip effect="dark" content="修改订单信息" placement="top" :enterable="false" :open-delay="500">
@@ -217,15 +224,15 @@ export default {
       this.queryInfo.createTime = this.selectedDate
       this.queryInfo.movieName = this.inputMovieName
       this.queryInfo.hallName = this.inputHallName
-      console.log('quaryInfo'+this.inputUserName)
+      // console.log('quaryInfo'+this.inputUserName)
       this.queryInfo.queryByUserName = this.inputUserName
-      console.log('sysUser.userName')
-      console.log(this.queryInfo.queryByUserName)
+      // console.log('sysUser.userName')
+      // console.log(this.queryInfo.queryByUserName)
       const _this = this;
       await axios.get('sysBill', {params: _this.queryInfo}).then(resp => {
         console.log(resp)
         _this.billList = resp.data.data;
-        // console.log("0000000000000000000000000:",_this.billList);
+        console.log("0000000000000000000000000:",_this.billList);
         _this.total = resp.data.total;
         _this.queryInfo.pageSize = resp.data.pageSize;
         _this.queryInfo.pageNum = resp.data.pageNum;

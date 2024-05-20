@@ -151,7 +151,7 @@ export default {
           { required: true, message: '请输入资源名', trigger: 'blur' }
         ],
         path: [
-          { required: true, message: '请输入资源路径', trigger: 'blur'}
+          { required: false, message: '请输入资源路径', trigger: 'blur'}
         ]
       },
       editDialogVisible: false,
@@ -161,7 +161,7 @@ export default {
           { required: true, message: '请输入资源名', trigger: 'blur' }
         ],
         path: [
-          { required: true, message: '请输入资源路径', trigger: 'blur'}
+          { required: false, message: '请输入资源路径', trigger: 'blur'}
         ]
       },
       multipleSelection: []

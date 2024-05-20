@@ -11,6 +11,8 @@ public interface SysBillMapper {
 
     SysBill findBillById(Long id);
 
+    SysBill findBillByCode(String code);
+
     int addBill(SysBill sysBill);
 
     int updateBill(SysBill sysBill);

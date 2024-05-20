@@ -11,6 +11,8 @@ public interface SysBillService {
 
     SysBill findBillById(Long id);
 
+    SysBill findBillByCode(String code);
+
     Object addBill(SysBill sysBill);
 
     int updateBill(SysBill sysBill);

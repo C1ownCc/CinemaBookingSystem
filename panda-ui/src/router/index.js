@@ -17,6 +17,7 @@ import UserInfo from "../views/user/UserInfo";
 import RoleInfo from "../views/role/RoleInfo";
 import ResourceInfo from "../views/role/ResourceInfo";
 import Error404 from "../views/Error404";
+import Inspection from '../views/bill/Inspection.vue';
 
 Vue.use(VueRouter)
 
@@ -44,7 +45,8 @@ const routes = [
       { path: '/user', component: UserInfo},
       { path: '/bill', component: BillInfo},
       { path: '/role', component: RoleInfo},
-      { path: '/resource', component: ResourceInfo}
+      { path: '/resource', component: ResourceInfo},
+      { path: '/inspection', component: Inspection}
     ]
   },
   {

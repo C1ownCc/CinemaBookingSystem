@@ -1,0 +1,80 @@
+14:48:58.948 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+14:48:58.955 [restartedMain] INFO  c.p.PandaAdminApplication - [logStarting,55] - Starting PandaAdminApplication using Java 17.0.10 on bogon with PID 80154 (/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-admin/target/classes started by charlotte in /Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem)
+14:48:58.955 [restartedMain] INFO  c.p.PandaAdminApplication - [logStartupProfileInfo,641] - The following profiles are active: druid
+14:48:59.537 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+14:48:59.895 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+14:49:00.173 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8181"]
+14:49:00.173 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+14:49:00.173 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+14:49:00.201 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+14:49:00.849 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+14:49:00.853 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+14:49:00.853 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+14:49:00.854 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+14:49:00.854 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+14:49:00.854 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+14:49:00.854 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+14:49:00.854 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@60173722
+14:49:00.908 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8181"]
+14:49:00.921 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+14:49:00.926 [restartedMain] INFO  c.p.PandaAdminApplication - [logStarted,61] - Started PandaAdminApplication in 2.195 seconds (JVM running for 2.755)
+14:50:07.802 [http-nio-8181-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:22:01.990 [http-nio-8181-exec-9] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+15:22:02.101 [http-nio-8181-exec-4] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+16:26:02.847 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+16:26:02.843 [http-nio-8181-exec-1] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+16:26:17.717 [http-nio-8181-exec-12] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+16:26:17.742 [http-nio-8181-exec-10] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+16:26:17.822 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+16:35:47.381 [http-nio-8181-exec-2] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+16:35:52.540 [http-nio-8181-exec-9] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+16:35:52.544 [http-nio-8181-exec-3] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+16:35:54.352 [http-nio-8181-exec-1] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+18:05:20.407 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+18:05:21.581 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+18:05:21.582 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+18:05:21.582 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+18:05:21.597 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+18:05:21.600 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+18:05:23.373 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+18:05:23.380 [restartedMain] INFO  c.p.PandaAdminApplication - [logStarting,55] - Starting PandaAdminApplication using Java 17.0.10 on bogon with PID 38393 (/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-admin/target/classes started by charlotte in /Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem)
+18:05:23.381 [restartedMain] INFO  c.p.PandaAdminApplication - [logStartupProfileInfo,641] - The following profiles are active: druid
+18:05:24.055 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+18:05:24.400 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+18:05:24.670 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8181"]
+18:05:24.670 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+18:05:24.670 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+18:05:24.699 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+18:05:25.182 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+18:05:25.186 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+18:05:25.186 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+18:05:25.187 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+18:05:25.187 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+18:05:25.187 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+18:05:25.187 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+18:05:25.187 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@75f4b4c
+18:05:25.234 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8181"]
+18:05:25.243 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+18:05:25.248 [restartedMain] INFO  c.p.PandaAdminApplication - [logStarted,61] - Started PandaAdminApplication in 2.144 seconds (JVM running for 2.803)
+18:52:17.471 [http-nio-8181-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:54:06.909 [http-nio-8181-exec-7] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+18:54:14.672 [http-nio-8181-exec-10] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+18:54:21.735 [http-nio-8181-exec-4] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+18:54:21.739 [http-nio-8181-exec-5] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+18:54:32.736 [http-nio-8181-exec-9] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+18:54:45.797 [http-nio-8181-exec-2] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!
+18:54:51.154 [http-nio-8181-exec-4] INFO  c.p.c.utils.JwtUtil - [verify,38] - 登录验证成功!

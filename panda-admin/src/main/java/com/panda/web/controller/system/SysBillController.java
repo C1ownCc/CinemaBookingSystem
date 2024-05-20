@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -59,11 +60,47 @@ public class SysBillController extends BaseController {
         // 更新场次座位信息
         sysSessionService.updateSession(curSession);
 
+        // 设置默认值
+        if (sysBillVo.getSysBill().getUseState() == null) {
+            sysBillVo.getSysBill().setUseState(false);
+        }
+
+        // 生成 viewing_code
+        Long userId = sysBillVo.getSysBill().getUserId(); // 假设 userId 已经存在于 SysBill 中
+        String seats = sysBillVo.getSysBill().getSeats();
+        String extractedSeats = formatSeats(seats);
+        String dateSuffix = getCurrentDateSuffix();
+        String viewingCode = "U" + userId + "S" + extractedSeats + "D" + dateSuffix;
+        sysBillVo.getSysBill().setViewingCode(viewingCode);
+
         Object obj = sysBillService.addBill(sysBillVo.getSysBill());
         if (obj instanceof Integer) {
             return getResult((Integer) obj);
         }
         return getResult(obj);
+    }
+
+    private String formatSeats(String seats) {
+        StringBuilder sb = new StringBuilder();
+        String[] seatArray = seats.split(",");
+        for (String seat : seatArray) {
+            // 提取每个座位的信息，例如 "4排5座" 提取为 "45"
+            seat = seat.replaceAll("[^\\d]", ""); // 移除非数字字符
+            sb.append(seat).append("-");
+        }
+        // 移除最后一个多余的分隔符
+        if (sb.length() > 0) {
+            sb.setLength(sb.length() - 1);
+        }
+        return sb.toString();
+    }
+
+    private String getCurrentDateSuffix() {
+        LocalDate currentDate = LocalDate.now();
+        String year = String.valueOf(currentDate.getYear()).substring(2); // 获取年份的后两位
+        String month = String.format("%02d", currentDate.getMonthValue()); // 获取两位月份
+        String day = String.format("%02d", currentDate.getDayOfMonth()); // 获取两位日期
+        return year + month + day;
     }
 
     @PutMapping("/sysBill")
@@ -107,6 +144,25 @@ public class SysBillController extends BaseController {
             sysSessionService.updateSession(curSession);
         }
         return getResult(rows);
+    }
+
+    @PutMapping("/sysBill/inspection")
+    public String inspection(@RequestParam String code){
+
+        SysBill billByCode = sysBillService.findBillByCode(code);
+        System.out.println("billByCode:---------------------------" + billByCode);
+        System.out.println(code);
+        if (billByCode == null){
+            return "订单不存在";
+        }else if (!billByCode.getPayState() || billByCode.getCancelState()){
+            return "订单未支付或已取消";
+        }else if (billByCode.getUseState()){
+            return "电影票已使用";
+        }else {
+            billByCode.setUseState(true);
+            sysBillService.updateBill(billByCode);
+            return "检票成功！";
+        }
     }
 
     @DeleteMapping("/sysBill/{ids}")

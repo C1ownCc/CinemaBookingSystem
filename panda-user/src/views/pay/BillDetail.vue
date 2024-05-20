@@ -1,10 +1,10 @@
 <template>
   <div>
-    <el-steps :active="3" align-center>
+    <el-steps :active="payState === true ? 4:3" align-center>
       <el-step title="选择影片场次"></el-step>
       <el-step title="选择座位"></el-step>
       <el-step title="15分钟内付款"></el-step>
-      <el-step title="影院取票观影" status="wait"></el-step>
+      <el-step title="影院取票观影"></el-step>
     </el-steps>
     <div class="bill-info-container">
       <!-- 订单状态 -->
@@ -92,10 +92,13 @@
           </div>
         </div>
         <template>
-          <div v-if="payState === true && cancelState === false">
-            <el-button @click="saveBarcode" type="primary" style="width: 200px; margin-top: 20px;" round>下载条形码</el-button>
+          <div v-if="payState === true && cancelState === false" >
+            <!-- <el-button @click="saveBarcode" type="primary" style="width: 200px; margin-top: 20px;" round>下载条形码</el-button>
             <vue-barcode value="billID" text="请保存此条形码，扫码入场" ref="barcode" :width="1.5" :height="50">
-            </vue-barcode>
+            </vue-barcode> -->
+            <span>请使用以下观影码检票入场</span>
+            <el-tag type="warning" size="small">{{ useState? '待使用':'未使用' }}</el-tag>
+            <el-tag type="success" style="display: block;">{{ this.billInfo.viewingCode }}</el-tag>
           </div>
         </template>
 
@@ -153,6 +156,8 @@ export default {
     return {
       billId: this.$route.params.billId,
       payVisible: false,
+      code: '',
+      useState:'',
       billInfo: {
         sysSession: {
           sysMovie: {},
@@ -179,58 +184,58 @@ export default {
   },
   mounted() {
     this.add()
-    this.getBarcode();
-    this.generateQRCode();
+    // this.getBarcode();
+    // this.generateQRCode();
   },
   methods: {
-    getBarcode () {
-      let options = {
-        text: "编码内容",//等同于JsBarcode第二个参数 
-        fontSize: 10,//条形码下方文字的大小
-        height: 60,//条形码的高度
-        width: 2.5,//条形码 条的宽度不是总体的宽度 (宽度过小 扫描枪会扫描不出来 天坑我踩过)
-        displayValue: false,//隐藏条形码下方文本
-      };
-      // JsBarcode第一个参数是容器ID名 第二个参数是条形码扫描后的内容(默认条形码的内容会在条形码下方展示) 第三个参数是方法的配置项(具体配置查看官网)
-      JsBarcode("#barcode", '5', options);
-    },
+    // getBarcode () {
+    //   let options = {
+    //     text: "编码内容",//等同于JsBarcode第二个参数 
+    //     fontSize: 10,//条形码下方文字的大小
+    //     height: 60,//条形码的高度
+    //     width: 2.5,//条形码 条的宽度不是总体的宽度 (宽度过小 扫描枪会扫描不出来 天坑我踩过)
+    //     displayValue: false,//隐藏条形码下方文本
+    //   };
+    //   // JsBarcode第一个参数是容器ID名 第二个参数是条形码扫描后的内容(默认条形码的内容会在条形码下方展示) 第三个参数是方法的配置项(具体配置查看官网)
+    //   JsBarcode("#barcode", '5', options);
+    // },
     qrCallBack(qrUrl) {
       console.log("二维码生成");
     },
 
-    saveBarcode() {
-      let svgElement = this.$refs.barcode.$el.querySelector('svg');
-      if (!svgElement) {
-        console.error('Barcode SVG element not found');
-        return;
-      }
+    // saveBarcode() {
+    //   let svgElement = this.$refs.barcode.$el.querySelector('svg');
+    //   if (!svgElement) {
+    //     console.error('Barcode SVG element not found');
+    //     return;
+    //   }
 
-      // 将SVG转换为DataURL
-      let xml = new XMLSerializer().serializeToString(svgElement);
-      let svg64 = btoa(unescape(encodeURIComponent(xml)));
-      let b64Start = 'data:image/svg+xml;base64,';
-      let image64 = b64Start + svg64;
+    //   // 将SVG转换为DataURL
+    //   let xml = new XMLSerializer().serializeToString(svgElement);
+    //   let svg64 = btoa(unescape(encodeURIComponent(xml)));
+    //   let b64Start = 'data:image/svg+xml;base64,';
+    //   let image64 = b64Start + svg64;
 
-      // 创建Image对象，用于渲染Canvas
-      let img = new Image();
-      img.onload = () => {
-        let canvas = document.createElement('canvas');
-        canvas.width = img.width;
-        canvas.height = img.height;
-        let ctx = canvas.getContext('2d');
-        ctx.drawImage(img, 0, 0);
-        let canvasData = canvas.toDataURL('image/png');
+    //   // 创建Image对象，用于渲染Canvas
+    //   let img = new Image();
+    //   img.onload = () => {
+    //     let canvas = document.createElement('canvas');
+    //     canvas.width = img.width;
+    //     canvas.height = img.height;
+    //     let ctx = canvas.getContext('2d');
+    //     ctx.drawImage(img, 0, 0);
+    //     let canvasData = canvas.toDataURL('image/png');
 
-        // 触发下载
-        let downloadLink = document.createElement('a');
-        downloadLink.href = canvasData;
-        downloadLink.download = 'barcode.png';
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-      };
-      img.src = image64;
-    },
+    //     // 触发下载
+    //     let downloadLink = document.createElement('a');
+    //     downloadLink.href = canvasData;
+    //     downloadLink.download = 'barcode.png';
+    //     document.body.appendChild(downloadLink);
+    //     downloadLink.click();
+    //     document.body.removeChild(downloadLink);
+    //   };
+    //   img.src = image64;
+    // },
 
     async getBillInfo() {
       const { data : res } = await axios.get('sysBill/' + this.billId)
@@ -248,13 +253,13 @@ export default {
       this.billInfo = res.data
 
       this.cancelTime = this.billInfo.cancelTime
-      console.log(this.billInfo)
       // 截止时间
       console.log(this.billInfo.deadline)
       //处理订单座位信息
       this.billSeats = JSON.parse(this.billInfo.seats)
       this.payState = this.billInfo.payState
       this.cancelState = this.billInfo.cancelState
+      this.useState = this.billInfo.useState
       console.log('the create_time'+this.billInfo.createTime)
       this.computeLeftTime()
     },

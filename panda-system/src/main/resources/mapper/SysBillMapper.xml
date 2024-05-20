@@ -56,20 +56,43 @@
         select * from sys_bill where sysdate() >= deadline and cancel_state = 0 and pay_state = 0
     </select>
 
+    <select id="findBillByCode" resultType="SysBill">
+            select * from sys_bill where viewing_code = #{viewingCode}
+    </select>
+<!--    <update id="addBill" parameterType="SysBill">-->
+<!--        &lt;!&ndash; 将添加后的主键id传回原对象 &ndash;&gt;-->
+<!--        <selectKey keyProperty="billId" keyColumn="bill_id" resultType="long" order="AFTER">-->
+<!--            select last_insert_id();-->
+<!--        </selectKey>-->
+<!--        insert into sys_bill (-->
+<!--            <if test="payState != null">pay_state, </if>-->
+<!--            user_id, session_id, seats, use_state, viewing_code, create_time, deadline-->
+<!--        ) values (-->
+<!--            <if test="payState != null">#{payState}, </if>-->
+<!--            #{userId}, #{sessionId}, #{seats},-->
+<!--            <if test="useState != null">#{useState},</if>-->
+<!--            <if test="viewingCode != null">#{viewingCode},</if>-->
+<!--            <if test="createTime != null">#{createTime},</if>-->
+<!--            <if test="createTime == null">sysdate(),</if>-->
+<!--            addtime(sysdate(), 15*100)-->
+<!--        )-->
+<!--    </update>-->
     <update id="addBill" parameterType="SysBill">
-        <!-- 将添加后的主键id传回原对象 -->
         <selectKey keyProperty="billId" keyColumn="bill_id" resultType="long" order="AFTER">
             select last_insert_id();
         </selectKey>
         insert into sys_bill (
-            <if test="payState != null">pay_state, </if>
-            user_id, session_id, seats, create_time, deadline
+        <if test="payState != null">pay_state, </if>
+        user_id, session_id, seats,
+        <if test="useState != null">use_state,</if>
+        <if test="viewingCode != null">viewing_code,</if>
+        create_time, deadline
         ) values (
-            <if test="payState != null">#{payState}, </if>
-            #{userId}, #{sessionId}, #{seats},
-            <if test="createTime != null">#{createTime},</if>
-            <if test="createTime == null">sysdate(),</if>
-            addtime(sysdate(), 15*100)
+        <if test="payState != null">#{payState}, </if>
+        #{userId}, #{sessionId}, #{seats},
+        <if test="useState != null">#{useState},</if>
+        <if test="viewingCode != null">#{viewingCode},</if>
+        sysdate(), addtime(sysdate(), 15*100)
         )
     </update>
 
@@ -80,6 +103,8 @@
         <if test="payState != null">pay_state = #{payState}, </if>
         <if test="seats != null and seats != ''">seats = #{seats}, </if>
         <if test="cancelTime != null ">cancel_time = #{cancelTime}, </if>
+        <if test="useState != null ">use_state = #{useState}, </if>
+        <if test="viewingCode != null ">viewing_code = #{viewingCode}, </if>
         create_time = sysdate()
         where bill_id = #{billId}
     </update>

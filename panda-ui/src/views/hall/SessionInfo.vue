@@ -238,6 +238,7 @@
           <span class="seat" :class="isSelected[seats[key][index]]" v-for="(item, index) in value"></span>
         </div>
       </div>
+      <div ref="pie" style="width: 100%; height: 400px; margin-top: 20px;"></div>
     </el-dialog>
 
 
@@ -246,7 +247,7 @@
 
 <script>
 import global from "@/assets/css/global.css"
-import echarts from 'echarts'
+import * as echarts from 'echarts'
 import moment from 'moment'
 export default {
   name: "HallInfo",
@@ -356,6 +357,48 @@ export default {
     // this.curCinemaName = this.loginUser.cinemaName
   },
   methods: {
+    drawPieChart(sold, available) {
+      // 确保 pie-chart 元素存在
+      let chartElement = this.$refs['pie'];
+      if (!chartElement) {
+        console.error("无法找到元素 #pie-chart");
+        return;
+      }
+
+      let chart = echarts.init(chartElement);
+      let option = {
+        title: {
+          text: '上座率',
+          left: 'center'
+        },
+        tooltip: {
+          trigger: 'item'
+        },
+        legend: {
+          orient: 'vertical',
+          left: 'left'
+        },
+        series: [
+          {
+            name: '座位情况',
+            type: 'pie',
+            radius: '50%',
+            data: [
+              { value: sold, name: '已售' },
+              { value: available, name: '全部座位' }
+            ],
+            emphasis: {
+              itemStyle: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+              }
+            }
+          }
+        ]
+      };
+      chart.setOption(option);
+    },
     getSessionList() {
       this.queryInfo.hallId = this.selectedHallId
       this.queryInfo.movieId = this.selectedMovieId
@@ -701,14 +744,21 @@ export default {
     },
     async checkSeat(id){
       const _this = this
+      let seatNums = 0;
+      let sallNums = 0;
       await axios.get('sysSession/find/' + id).then(resp => {
         console.log(resp)
         _this.seats = JSON.parse(resp.data.data.sessionSeats)
         _this.col = resp.data.data.sysHall.seatNumsRow
+        seatNums = resp.data.data.sysHall.seatNums
+        sallNums = resp.data.data.sallNums
       })
-      console.log(this.col)
+      // console.log(this.col)
       this.checkDialogWidth = 200 + this.col * 40 + 'px'
       this.checkDialogVisible = true
+      this.$nextTick(() => {
+        _this.drawPieChart(sallNums, seatNums);
+      });
     }
   }
 }
