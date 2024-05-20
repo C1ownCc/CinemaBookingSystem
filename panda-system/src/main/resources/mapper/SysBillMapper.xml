@@ -113,4 +113,19 @@
         delete from sys_bill where bill_id = #{id}
     </update>
 
+    <!-- 获取指定场次的已使用座位数 -->
+    <select id="countUsedSeatsBySessionId" resultType="Integer">
+        SELECT SUM(CHAR_LENGTH(seats) - CHAR_LENGTH(REPLACE(seats, ',', '')) + 1)
+        FROM sys_bill
+        WHERE session_id = #{sessionId}
+          AND use_state = true
+    </select>
+
+    <!-- 获取指定场次的已购买座位数 -->
+    <select id="countTotalSeatsBySessionId" resultType="integer">
+        SELECT SUM(CHAR_LENGTH(seats) - CHAR_LENGTH(REPLACE(seats, ',', '')) + 1)
+        FROM sys_bill
+        WHERE session_id = #{sessionId}
+    </select>
+
 </mapper>

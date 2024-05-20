@@ -1,7 +1,330 @@
-09:26:27.408 [http-nio-8181-exec-7] ERROR c.p.c.utils.JwtUtil - [verify,41] - JwtUtil登录验证失败!
-09:26:27.410 [http-nio-8181-exec-7] ERROR c.p.f.s.r.CustomerRealm - [doGetAuthenticationInfo,65] - 用户名或密码错误(token无效或者与登录者不匹配)
-09:26:27.410 [http-nio-8181-exec-7] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败
-09:33:07.794 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
+11:33:44.698 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBill' defined in class path resource [com/panda/framework/util/CancelTimeoutBillUtil.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [void]: Factory method 'canelTimeoutBill' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.panda.PandaAdminApplication.main(PandaAdminApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [void]: Factory method 'canelTimeoutBill' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at com.panda.system.service.impl.SysBillServiceImpl.findTimeoutBill(SysBillServiceImpl.java:54)
+	at com.panda.framework.util.CancelTimeoutBillUtil.canelTimeoutBill(CancelTimeoutBillUtil.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 25 common frames omitted
+11:33:57.673 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBill' defined in class path resource [com/panda/framework/util/CancelTimeoutBillUtil.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [void]: Factory method 'canelTimeoutBill' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.panda.PandaAdminApplication.main(PandaAdminApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [void]: Factory method 'canelTimeoutBill' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at com.panda.system.service.impl.SysBillServiceImpl.findTimeoutBill(SysBillServiceImpl.java:54)
+	at com.panda.framework.util.CancelTimeoutBillUtil.canelTimeoutBill(CancelTimeoutBillUtil.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 25 common frames omitted
+11:34:05.623 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shiroFilter' defined in class path resource [com/panda/framework/config/ShiroConfig.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorizationAttributeSourceAdvisor' defined in class path resource [org/apache/shiro/spring/boot/autoconfigure/ShiroAnnotationProcessorAutoConfiguration.class]: Unsatisfied dependency expressed through method 'authorizationAttributeSourceAdvisor' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'getDefaultWebSecurityManager' defined in class path resource [com/panda/framework/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'getDefaultWebSecurityManager' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'realm': Unsatisfied dependency expressed through field 'sysUserService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserService': Unsatisfied dependency expressed through field 'sysUserMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-system/target/classes/com/panda/system/mapper/SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "Identifier (" to complete MethodHeaderName
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error, insert ";" to complete MethodDeclaration
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:270)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:567)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.panda.PandaAdminApplication.main(PandaAdminApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorizationAttributeSourceAdvisor' defined in class path resource [org/apache/shiro/spring/boot/autoconfigure/ShiroAnnotationProcessorAutoConfiguration.class]: Unsatisfied dependency expressed through method 'authorizationAttributeSourceAdvisor' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'getDefaultWebSecurityManager' defined in class path resource [com/panda/framework/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'getDefaultWebSecurityManager' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'realm': Unsatisfied dependency expressed through field 'sysUserService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserService': Unsatisfied dependency expressed through field 'sysUserMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-system/target/classes/com/panda/system/mapper/SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "Identifier (" to complete MethodHeaderName
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error, insert ";" to complete MethodDeclaration
+
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:253)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'getDefaultWebSecurityManager' defined in class path resource [com/panda/framework/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'getDefaultWebSecurityManager' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'realm': Unsatisfied dependency expressed through field 'sysUserService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserService': Unsatisfied dependency expressed through field 'sysUserMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-system/target/classes/com/panda/system/mapper/SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "Identifier (" to complete MethodHeaderName
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error, insert ";" to complete MethodDeclaration
+
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 36 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'realm': Unsatisfied dependency expressed through field 'sysUserService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserService': Unsatisfied dependency expressed through field 'sysUserMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-system/target/classes/com/panda/system/mapper/SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "Identifier (" to complete MethodHeaderName
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error, insert ";" to complete MethodDeclaration
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 50 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserService': Unsatisfied dependency expressed through field 'sysUserMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-system/target/classes/com/panda/system/mapper/SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "Identifier (" to complete MethodHeaderName
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error, insert ";" to complete MethodDeclaration
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 65 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-system/target/classes/com/panda/system/mapper/SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "Identifier (" to complete MethodHeaderName
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error, insert ";" to complete MethodDeclaration
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 79 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "Identifier (" to complete MethodHeaderName
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error, insert ";" to complete MethodDeclaration
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 90 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "Identifier (" to complete MethodHeaderName
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error, insert ";" to complete MethodDeclaration
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 103 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "Identifier (" to complete MethodHeaderName
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error, insert ";" to complete MethodDeclaration
+
+	at com.panda.system.mapper.SysBillMapper.<clinit>(SysBillMapper.java:24)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:186)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:423)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:97)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:610)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:490)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:632)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bac5544f.CGLIB$sqlSessionFactory$2(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bac5544f$$FastClassBySpringCGLIB$$4a4e5bf0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bac5544f.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 104 common frames omitted
+11:34:29.718 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBill' defined in class path resource [com/panda/framework/util/CancelTimeoutBillUtil.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [void]: Factory method 'canelTimeoutBill' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.panda.PandaAdminApplication.main(PandaAdminApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [void]: Factory method 'canelTimeoutBill' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at com.panda.system.service.impl.SysBillServiceImpl.findTimeoutBill(SysBillServiceImpl.java:54)
+	at com.panda.framework.util.CancelTimeoutBillUtil.canelTimeoutBill(CancelTimeoutBillUtil.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 25 common frames omitted
+11:38:02.004 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBillUtil' defined in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-framework/target/classes/com/panda/framework/util/CancelTimeoutBillUtil.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.panda.framework.util.CancelTimeoutBillUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
 	Lambda expressions are allowed only at source level 1.8 or above
 	'<>' operator is not allowed for source level below 1.7
@@ -64,7 +387,7 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
 	... 24 common frames omitted
-09:36:23.844 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
+11:46:31.426 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBillUtil' defined in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-framework/target/classes/com/panda/framework/util/CancelTimeoutBillUtil.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.panda.framework.util.CancelTimeoutBillUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
 	Lambda expressions are allowed only at source level 1.8 or above
 	'<>' operator is not allowed for source level below 1.7
@@ -127,116 +450,14 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
 	... 24 common frames omitted
-09:36:27.818 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBillUtil' defined in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-framework/target/classes/com/panda/framework/util/CancelTimeoutBillUtil.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.panda.framework.util.CancelTimeoutBillUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	Lambda expressions are allowed only at source level 1.8 or above
-	Cannot refer to the non-final local variable valueMap defined in an enclosing scope
-
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.panda.PandaAdminApplication.main(PandaAdminApplication.java:10)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.panda.framework.util.CancelTimeoutBillUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	Lambda expressions are allowed only at source level 1.8 or above
-	Cannot refer to the non-final local variable valueMap defined in an enclosing scope
-
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
-	... 22 common frames omitted
-Caused by: java.lang.Error: Unresolved compilation problems: 
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	Lambda expressions are allowed only at source level 1.8 or above
-	Cannot refer to the non-final local variable valueMap defined in an enclosing scope
-
-	at com.panda.framework.util.CancelTimeoutBillUtil.<init>(CancelTimeoutBillUtil.java:35)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
-	... 24 common frames omitted
-09:37:58.687 [http-nio-8181-exec-2] ERROR c.p.c.utils.JwtUtil - [verify,41] - JwtUtil登录验证失败!
-09:37:58.688 [http-nio-8181-exec-2] ERROR c.p.f.s.r.CustomerRealm - [doGetAuthenticationInfo,65] - 用户名或密码错误(token无效或者与登录者不匹配)
-09:37:58.688 [http-nio-8181-exec-2] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败
-09:38:09.228 [http-nio-8181-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - [log,175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error updating database.  Cause: java.sql.SQLException: Column count doesn't match value count at row 1
-### The error may exist in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-system/target/classes/mapper/SysBillMapper.xml]
-### The error may involve com.panda.system.mapper.SysBillMapper.addBill-Inline
-### The error occurred while setting parameters
-### SQL: insert into sys_bill (                           user_id, session_id, seats, use_state, viewing_code, create_time, deadline         ) values (                           ?, ?, ?,                                                        sysdate(),              addtime(sysdate(), 15*100)         )
-### Cause: java.sql.SQLException: Column count doesn't match value count at row 1
-; bad SQL grammar []; nested exception is java.sql.SQLException: Column count doesn't match value count at row 1] with root cause
-java.sql.SQLException: Column count doesn't match value count at row 1
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
-	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
-	at jdk.internal.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
-	at jdk.proxy4/jdk.proxy4.$Proxy84.execute(Unknown Source)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
-	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
-	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
-	at jdk.proxy2/jdk.proxy2.$Proxy94.update(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at jdk.proxy2/jdk.proxy2.$Proxy65.update(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:287)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
+11:52:35.560 [http-nio-8181-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - [log,175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Mapper method 'com.panda.system.mapper.SysBillMapper.countUsedSeatsBySessionId attempted to return null from a method with a primitive return type (int).] with root cause
+org.apache.ibatis.binding.BindingException: Mapper method 'com.panda.system.mapper.SysBillMapper.countUsedSeatsBySessionId attempted to return null from a method with a primitive return type (int).
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:102)
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at jdk.proxy3/jdk.proxy3.$Proxy73.addBill(Unknown Source)
-	at com.panda.system.service.impl.SysBillServiceImpl.addBill(SysBillServiceImpl.java:30)
-	at com.panda.web.controller.system.SysBillController.addBill(SysBillController.java:62)
+	at jdk.proxy3/jdk.proxy3.$Proxy73.countUsedSeatsBySessionId(Unknown Source)
+	at com.panda.system.service.impl.SysBillServiceImpl.countUsedSeatsBySessionId(SysBillServiceImpl.java:60)
+	at com.panda.web.controller.system.SysBillController.getSessionOccupancy(SysBillController.java:177)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -250,8 +471,8 @@ java.sql.SQLException: Column count doesn't match value count at row 1
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
@@ -306,50 +527,14 @@ java.sql.SQLException: Column count doesn't match value count at row 1
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-09:41:32.010 [http-nio-8181-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - [log,175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error updating database.  Cause: java.sql.SQLException: Column count doesn't match value count at row 1
-### The error may exist in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-system/target/classes/mapper/SysBillMapper.xml]
-### The error may involve com.panda.system.mapper.SysBillMapper.addBill-Inline
-### The error occurred while setting parameters
-### SQL: insert into sys_bill (                           user_id, session_id, seats, use_state, viewing_code, create_time, deadline         ) values (                           ?, ?, ?,                                                        sysdate(),              addtime(sysdate(), 15*100)         )
-### Cause: java.sql.SQLException: Column count doesn't match value count at row 1
-; bad SQL grammar []; nested exception is java.sql.SQLException: Column count doesn't match value count at row 1] with root cause
-java.sql.SQLException: Column count doesn't match value count at row 1
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
-	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
-	at jdk.internal.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
-	at jdk.proxy4/jdk.proxy4.$Proxy84.execute(Unknown Source)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
-	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
-	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
-	at jdk.proxy2/jdk.proxy2.$Proxy94.update(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at jdk.proxy2/jdk.proxy2.$Proxy65.update(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:287)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
+15:18:21.821 [http-nio-8181-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - [log,175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Mapper method 'com.panda.system.mapper.SysBillMapper.countUsedSeatsBySessionId attempted to return null from a method with a primitive return type (int).] with root cause
+org.apache.ibatis.binding.BindingException: Mapper method 'com.panda.system.mapper.SysBillMapper.countUsedSeatsBySessionId attempted to return null from a method with a primitive return type (int).
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:102)
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at jdk.proxy3/jdk.proxy3.$Proxy73.addBill(Unknown Source)
-	at com.panda.system.service.impl.SysBillServiceImpl.addBill(SysBillServiceImpl.java:30)
-	at com.panda.web.controller.system.SysBillController.addBill(SysBillController.java:62)
+	at jdk.proxy3/jdk.proxy3.$Proxy73.countUsedSeatsBySessionId(Unknown Source)
+	at com.panda.system.service.impl.SysBillServiceImpl.countUsedSeatsBySessionId(SysBillServiceImpl.java:60)
+	at com.panda.web.controller.system.SysBillController.getSessionOccupancy(SysBillController.java:177)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -363,8 +548,8 @@ java.sql.SQLException: Column count doesn't match value count at row 1
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
@@ -419,50 +604,14 @@ java.sql.SQLException: Column count doesn't match value count at row 1
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-09:48:07.334 [http-nio-8181-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - [log,175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
-### Error updating database.  Cause: java.sql.SQLException: Field 'use_state' doesn't have a default value
-### The error may exist in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-system/target/classes/mapper/SysBillMapper.xml]
-### The error may involve com.panda.system.mapper.SysBillMapper.addBill-Inline
-### The error occurred while setting parameters
-### SQL: insert into sys_bill (                   user_id, session_id, seats,                             create_time, deadline         ) values (                   ?, ?, ?,                             sysdate(), addtime(sysdate(), 15*100)         )
-### Cause: java.sql.SQLException: Field 'use_state' doesn't have a default value
-; Field 'use_state' doesn't have a default value; nested exception is java.sql.SQLException: Field 'use_state' doesn't have a default value] with root cause
-java.sql.SQLException: Field 'use_state' doesn't have a default value
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
-	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
-	at jdk.internal.reflect.GeneratedMethodAccessor62.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
-	at jdk.proxy4/jdk.proxy4.$Proxy84.execute(Unknown Source)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
-	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
-	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
-	at jdk.proxy2/jdk.proxy2.$Proxy95.update(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at jdk.proxy2/jdk.proxy2.$Proxy65.update(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:287)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
+15:19:38.973 [http-nio-8181-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - [log,175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Mapper method 'com.panda.system.mapper.SysBillMapper.countUsedSeatsBySessionId attempted to return null from a method with a primitive return type (int).] with root cause
+org.apache.ibatis.binding.BindingException: Mapper method 'com.panda.system.mapper.SysBillMapper.countUsedSeatsBySessionId attempted to return null from a method with a primitive return type (int).
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:102)
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at jdk.proxy3/jdk.proxy3.$Proxy73.addBill(Unknown Source)
-	at com.panda.system.service.impl.SysBillServiceImpl.addBill(SysBillServiceImpl.java:30)
-	at com.panda.web.controller.system.SysBillController.addBill(SysBillController.java:62)
+	at jdk.proxy3/jdk.proxy3.$Proxy73.countUsedSeatsBySessionId(Unknown Source)
+	at com.panda.system.service.impl.SysBillServiceImpl.countUsedSeatsBySessionId(SysBillServiceImpl.java:60)
+	at com.panda.web.controller.system.SysBillController.getSessionOccupancy(SysBillController.java:177)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -476,8 +625,8 @@ java.sql.SQLException: Field 'use_state' doesn't have a default value
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
@@ -532,122 +681,191 @@ java.sql.SQLException: Field 'use_state' doesn't have a default value
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-10:01:25.112 [http-nio-8181-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - [log,175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
-### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'viewing_code' at row 1
-### The error may exist in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-system/target/classes/mapper/SysBillMapper.xml]
-### The error may involve com.panda.system.mapper.SysBillMapper.addBill-Inline
-### The error occurred while setting parameters
-### SQL: insert into sys_bill (                   user_id, session_id, seats,          use_state,           viewing_code,          create_time, deadline         ) values (                   ?, ?, ?,          ?,           ?,          sysdate(), addtime(sysdate(), 15*100)         )
-### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'viewing_code' at row 1
-; Data truncation: Data too long for column 'viewing_code' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'viewing_code' at row 1] with root cause
-com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'viewing_code' at row 1
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
-	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
-	at jdk.internal.reflect.GeneratedMethodAccessor62.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
-	at jdk.proxy4/jdk.proxy4.$Proxy84.execute(Unknown Source)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
-	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
-	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+15:24:34.940 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBill' defined in class path resource [com/panda/framework/util/CancelTimeoutBillUtil.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [void]: Factory method 'canelTimeoutBill' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.panda.PandaAdminApplication.main(PandaAdminApplication.java:10)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
-	at jdk.proxy2/jdk.proxy2.$Proxy95.update(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [void]: Factory method 'canelTimeoutBill' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at com.panda.system.service.impl.SysBillServiceImpl.findTimeoutBill(SysBillServiceImpl.java:54)
+	at com.panda.framework.util.CancelTimeoutBillUtil.canelTimeoutBill(CancelTimeoutBillUtil.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at jdk.proxy2/jdk.proxy2.$Proxy65.update(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:287)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at jdk.proxy3/jdk.proxy3.$Proxy73.addBill(Unknown Source)
-	at com.panda.system.service.impl.SysBillServiceImpl.addBill(SysBillServiceImpl.java:30)
-	at com.panda.web.controller.system.SysBillController.addBill(SysBillController.java:77)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 25 common frames omitted
+15:25:02.507 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBill' defined in class path resource [com/panda/framework/util/CancelTimeoutBillUtil.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [void]: Factory method 'canelTimeoutBill' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.panda.PandaAdminApplication.main(PandaAdminApplication.java:10)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
-	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
-	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
-	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
-	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
-	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
-	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
-	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
-	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
-	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
-	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-10:27:14.970 [http-nio-8181-exec-8] ERROR c.p.c.utils.JwtUtil - [verify,41] - JwtUtil登录验证失败!
-10:27:14.975 [http-nio-8181-exec-8] ERROR c.p.f.s.r.CustomerRealm - [doGetAuthenticationInfo,65] - 用户名或密码错误(token无效或者与登录者不匹配)
-10:27:14.976 [http-nio-8181-exec-8] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败
-11:07:50.496 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [void]: Factory method 'canelTimeoutBill' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at com.panda.system.service.impl.SysBillServiceImpl.findTimeoutBill(SysBillServiceImpl.java:54)
+	at com.panda.framework.util.CancelTimeoutBillUtil.canelTimeoutBill(CancelTimeoutBillUtil.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 25 common frames omitted
+15:25:19.681 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBill' defined in class path resource [com/panda/framework/util/CancelTimeoutBillUtil.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [void]: Factory method 'canelTimeoutBill' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.panda.PandaAdminApplication.main(PandaAdminApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [void]: Factory method 'canelTimeoutBill' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at com.panda.system.service.impl.SysBillServiceImpl.findTimeoutBill(SysBillServiceImpl.java:54)
+	at com.panda.framework.util.CancelTimeoutBillUtil.canelTimeoutBill(CancelTimeoutBillUtil.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 25 common frames omitted
+15:25:29.646 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBill' defined in class path resource [com/panda/framework/util/CancelTimeoutBillUtil.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [void]: Factory method 'canelTimeoutBill' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.panda.PandaAdminApplication.main(PandaAdminApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [void]: Factory method 'canelTimeoutBill' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The method findTimeoutBill() of type SysBillServiceImpl must override a superclass method
+
+	at com.panda.system.service.impl.SysBillServiceImpl.findTimeoutBill(SysBillServiceImpl.java:54)
+	at com.panda.framework.util.CancelTimeoutBillUtil.canelTimeoutBill(CancelTimeoutBillUtil.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 25 common frames omitted
+15:25:46.746 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBillUtil' defined in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-framework/target/classes/com/panda/framework/util/CancelTimeoutBillUtil.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.panda.framework.util.CancelTimeoutBillUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
 	Lambda expressions are allowed only at source level 1.8 or above
 	'<>' operator is not allowed for source level below 1.7
@@ -710,7 +928,7 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
 	... 24 common frames omitted
-11:16:06.740 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
+15:25:51.641 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBillUtil' defined in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-framework/target/classes/com/panda/framework/util/CancelTimeoutBillUtil.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.panda.framework.util.CancelTimeoutBillUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
 	Lambda expressions are allowed only at source level 1.8 or above
 	'<>' operator is not allowed for source level below 1.7
@@ -773,198 +991,6 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
 	... 24 common frames omitted
-11:16:49.306 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBillUtil' defined in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-framework/target/classes/com/panda/framework/util/CancelTimeoutBillUtil.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.panda.framework.util.CancelTimeoutBillUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	Lambda expressions are allowed only at source level 1.8 or above
-	Cannot refer to the non-final local variable valueMap defined in an enclosing scope
-
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.panda.PandaAdminApplication.main(PandaAdminApplication.java:10)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.panda.framework.util.CancelTimeoutBillUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	Lambda expressions are allowed only at source level 1.8 or above
-	Cannot refer to the non-final local variable valueMap defined in an enclosing scope
-
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
-	... 22 common frames omitted
-Caused by: java.lang.Error: Unresolved compilation problems: 
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	Lambda expressions are allowed only at source level 1.8 or above
-	Cannot refer to the non-final local variable valueMap defined in an enclosing scope
-
-	at com.panda.framework.util.CancelTimeoutBillUtil.<init>(CancelTimeoutBillUtil.java:35)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
-	... 24 common frames omitted
-11:16:51.107 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBillUtil' defined in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-framework/target/classes/com/panda/framework/util/CancelTimeoutBillUtil.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.panda.framework.util.CancelTimeoutBillUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	Lambda expressions are allowed only at source level 1.8 or above
-	Cannot refer to the non-final local variable valueMap defined in an enclosing scope
-
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.panda.PandaAdminApplication.main(PandaAdminApplication.java:10)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.panda.framework.util.CancelTimeoutBillUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	Lambda expressions are allowed only at source level 1.8 or above
-	Cannot refer to the non-final local variable valueMap defined in an enclosing scope
-
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
-	... 22 common frames omitted
-Caused by: java.lang.Error: Unresolved compilation problems: 
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	Lambda expressions are allowed only at source level 1.8 or above
-	Cannot refer to the non-final local variable valueMap defined in an enclosing scope
-
-	at com.panda.framework.util.CancelTimeoutBillUtil.<init>(CancelTimeoutBillUtil.java:35)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
-	... 24 common frames omitted
-11:17:20.267 [restartedMain] ERROR o.s.b.SpringApplication - [reportFailure,821] - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cancelTimeoutBillUtil' defined in file [/Users/charlotte/Desktop/编程/临时项目/影院售票系统/CinemaBookingSystem/panda-framework/target/classes/com/panda/framework/util/CancelTimeoutBillUtil.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.panda.framework.util.CancelTimeoutBillUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	Lambda expressions are allowed only at source level 1.8 or above
-	Cannot refer to the non-final local variable valueMap defined in an enclosing scope
-
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.panda.PandaAdminApplication.main(PandaAdminApplication.java:10)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.panda.framework.util.CancelTimeoutBillUtil]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	Lambda expressions are allowed only at source level 1.8 or above
-	Cannot refer to the non-final local variable valueMap defined in an enclosing scope
-
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
-	... 22 common frames omitted
-Caused by: java.lang.Error: Unresolved compilation problems: 
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	'<>' operator is not allowed for source level below 1.7
-	Lambda expressions are allowed only at source level 1.8 or above
-	Lambda expressions are allowed only at source level 1.8 or above
-	Cannot refer to the non-final local variable valueMap defined in an enclosing scope
-
-	at com.panda.framework.util.CancelTimeoutBillUtil.<init>(CancelTimeoutBillUtil.java:35)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
-	... 24 common frames omitted
-12:53:10.303 [http-nio-8181-exec-5] ERROR c.p.c.utils.JwtUtil - [verify,41] - JwtUtil登录验证失败!
-12:53:10.305 [http-nio-8181-exec-5] ERROR c.p.f.s.r.CustomerRealm - [doGetAuthenticationInfo,65] - 用户名或密码错误(token无效或者与登录者不匹配)
-12:53:10.305 [http-nio-8181-exec-5] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败
-12:55:09.195 [http-nio-8181-exec-10] ERROR c.p.c.utils.JwtUtil - [verify,41] - JwtUtil登录验证失败!
-12:55:09.196 [http-nio-8181-exec-10] ERROR c.p.f.s.r.CustomerRealm - [doGetAuthenticationInfo,65] - 用户名或密码错误(token无效或者与登录者不匹配)
-12:55:09.196 [http-nio-8181-exec-10] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败
+16:33:39.436 [http-nio-8181-exec-9] ERROR c.p.c.utils.JwtUtil - [verify,41] - JwtUtil登录验证失败!
+16:33:39.439 [http-nio-8181-exec-9] ERROR c.p.f.s.r.CustomerRealm - [doGetAuthenticationInfo,65] - 用户名或密码错误(token无效或者与登录者不匹配)
+16:33:39.440 [http-nio-8181-exec-9] ERROR c.p.f.s.JwtFilter - [isAccessAllowed,46] - JwtFilter过滤验证失败

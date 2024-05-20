@@ -55,4 +55,14 @@ public class SysBillServiceImpl implements SysBillService {
         return sysBillMapper.findTimeoutBill();
     }
 
+    @Override
+    public Integer countUsedSeatsBySessionId(Long id) {
+        return sysBillMapper.countUsedSeatsBySessionId(id) == null ? 0 : sysBillMapper.countUsedSeatsBySessionId(id) ;
+    }
+
+    @Override
+    public Integer countTotalSeatsBySessionId(Long id) {
+        return sysBillMapper.countTotalSeatsBySessionId(id) == null ? 0 : sysBillMapper.countTotalSeatsBySessionId(id) ;
+    }
+
 }

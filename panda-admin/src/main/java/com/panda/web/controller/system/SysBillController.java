@@ -16,7 +16,9 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -168,6 +170,18 @@ public class SysBillController extends BaseController {
     @DeleteMapping("/sysBill/{ids}")
     public ResponseResult deleteBill(@PathVariable Long[] ids) {
         return getResult(sysBillService.deleteBill(ids));
+    }
+
+    @GetMapping("/sysBill/occupancy/{id}")
+    public ResponseResult getSessionOccupancy(@PathVariable Long id) {
+        int usedSeats = sysBillService.countUsedSeatsBySessionId(id);
+        int totalSeats = sysBillService.countTotalSeatsBySessionId(id);
+
+        Map<String, Object> data = new HashMap<>();
+        data.put("usedSeats", usedSeats);
+        data.put("totalSeats", totalSeats);
+
+        return ResponseResult.success(data);
     }
 
 }

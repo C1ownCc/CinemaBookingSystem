@@ -21,4 +21,7 @@ public interface SysBillMapper {
 
     List<SysBill> findTimeoutBill();
 
+    Integer countUsedSeatsBySessionId(Long id);
+
+    Integer countTotalSeatsBySessionId(Long id);
 }

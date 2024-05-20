@@ -21,4 +21,8 @@ public interface SysBillService {
 
     List<SysBill> findTimeoutBill();
 
+    Integer countUsedSeatsBySessionId(Long id);
+
+    Integer countTotalSeatsBySessionId(Long id);
+
 }
